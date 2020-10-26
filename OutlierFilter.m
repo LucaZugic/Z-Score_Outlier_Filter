@@ -7,7 +7,7 @@ for column = 1:(column_number)
    column_data = data(:,column_number);
    for element = 1:column
        z_score = (element - mean(column_data)) / std(column_data);
-       if z_score >= max_z_score
+       if z_score > max_z_score
            element = 0;
        end
    end
